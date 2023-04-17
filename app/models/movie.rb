@@ -13,4 +13,7 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
+  has_many :characters
+  has_many :actors, :through => :characters
+  belongs_to :director
 end
